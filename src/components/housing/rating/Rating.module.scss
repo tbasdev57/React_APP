@@ -1,0 +1,16 @@
+@import "src/styles";
+
+.Rating {
+  display: flex;
+  gap: 10px;
+}
+
+.Rating__icon {
+    width: 2.4rem;
+  @include breakpoint("small") {
+  }
+}
+
+.Rating__icon_active {
+
+}

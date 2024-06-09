@@ -1,0 +1,40 @@
+@import "src/styles";
+
+.Banner {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 22rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    mix-blend-mode: darken;
+    opacity: var(--Banner-bg-opacity, 0.6);
+    background-color: rgba(0, 0, 0);
+  }
+}
+
+.Banner__title {
+  color: white;
+  font-weight: bold;
+  font-size: 4.8rem;
+  text-align: center;
+  text-shadow: 0 0 5px rgba(0, 0, 0);
+  z-index: 1;
+
+  @include breakpoint("large") {
+    font-size: 4rem;
+  }
+}
